@@ -1,0 +1,8 @@
+1. always try to make connection between pattern and rows and or column
+2. outer loop (row) used to print next "\n"
+3. for(int r=0 ; r<n ; r++){
+    for(int c=0 ; c<according_to_pattern ; c++){
+            cout<< some_formula_and_stars
+    }
+    cout<<"\n";
+}
