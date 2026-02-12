@@ -1,22 +1,19 @@
 class Solution {
 public:
-
     int reverse(int x) {
-    int lastdigit=0;
-    int rev = 0;
+        long long INT_MIN_VAL = -(1LL << 31);
+        long long INT_MAX_VAL = (1LL << 31) - 1;
+
+        
+        //int counter=0;
+        long long rev=0;
+        int lastdigit;
         while(x!=0){
-              lastdigit = x%10;
-           if (rev > 214748364 || (rev == 214748364 && lastdigit > 7)) {
-                return 0;
-            }
-            if (rev < -214748364 || (rev == -214748364 && lastdigit == -9)) {
-                return 0;
-            }
-          
-            rev = rev*10+lastdigit;
+            lastdigit= x%10;
+            rev = rev *10+(lastdigit);
+            if(rev<INT_MIN_VAL||rev> INT_MAX_VAL) return 0;
             x=x/10;
         }
-return rev;
-
-    }
+        return rev;
+}
 };
